@@ -1,0 +1,52 @@
+{% load static %}
+<html>
+    <head>
+        <title>Introduction</title>
+        <style>
+            
+            .email-div{
+                display: flex;
+                flex-direction: column;
+                gap: 0.5em;
+            }
+
+            .isiForm-button{
+                background: rgb(77, 128, 90);
+                color: white;
+                border-radius: 1em;
+                padding: 0.5em;
+                width: fit-content;   
+                font-family: sans-serif;   
+                width: fit;     
+
+            }
+
+            .email-button {
+                background: rgb(77, 128, 90);
+                color: white;
+                border-radius: 1em;
+                padding: 0.5em;
+                width: fit-content;   
+                font-family: sans-serif;   
+                width: fit;        
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <div class="email.div">
+
+
+        {% for profile in profiles %}    
+            <a href="{%url 'index:profile' profile.id %}" class= "email-button" >
+                {{ profile.name}} 
+            </a>
+            
+        {% endfor %}
+
+        <a href="{% url 'index:isiform' %}" class="isiForm-button"> Tambah Profil</a>
+
+    </body>
+</html>
+

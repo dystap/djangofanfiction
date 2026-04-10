@@ -1,0 +1,33 @@
+{% load static %}
+<html>
+    <head>
+        <title>Isi Form Profil</title>
+        <style>
+            .form-control {
+                border-radius: 0.5em;
+                padding: 0.5em;
+                width: 67%;
+            }
+
+            #profile-form-2 > div {
+                display: flex;
+                flex-direction: column;
+            }
+        </style>
+    </head>
+    <body>
+
+        <h1>Isi Form Profil 2</h1>
+       
+        <form action="{% url 'index:isiformsubmit' %}" method="POST" id="profile-form-2">
+
+            {% csrf_token %}
+
+            {{ form.as_div }}
+
+            <button type="submit">Kirim</button>
+
+        </form>
+
+    </body>
+</html>

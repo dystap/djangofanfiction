@@ -1,0 +1,44 @@
+{% load static %}
+<html>
+    <head>
+        <title>Introduction</title>
+        <style>
+            .border {
+                border-style: dotted;
+                border: 2px solid black;
+            }
+            .image-left {
+            float: left;
+            margin-right: 15px;
+            }
+        </style>
+    </head>
+    <body background={% static 'index/img/green.jpg'%}>
+            
+        <h1 style="font-size: 300%; 
+        background-color: rgb(150, 173, 110);
+        color: darkolivegreen;
+        font-family:cursive;
+        text-align: center;
+        " >
+        Fiorenza's Introduction
+    </h1>
+        
+    <img src = "{% static 'index/img/green.jpg' %}" alt="Fiorenza" width="500" height="500" float="left" class= "image-left">
+    
+        
+        <p style ="background-color: lightgreen;
+        "font-family: cursive
+        >
+            Name = Fiorenza<br>
+            Age = 13 Years old<br>
+            Birthdaty = 16th January 2012<br>
+            Hobby = Drawing, Playing games and reading books<br>
+            The color i love = Green<br>
+        
+           
+
+        </p>
+       
+    </body>
+</html>

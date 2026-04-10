@@ -1,0 +1,32 @@
+{% load static %}
+<html>
+    <head>
+        <title>Isi Form Profile</title>
+        <style>
+
+        </style>
+            
+          
+    </head>
+    <body>
+        <form action="{%url 'index:isiformsubmit'%}" method="post">
+
+            {% csrf_token %}
+
+            <label for="()">Nama<label>
+            <input type="text" name="name" placeholder="isi namamu" required>
+            <label for="()">Email<label>
+            <input type="email" name="email" placeholder="isi emailmu" required>
+            <label for="()">Tanggal Lahir<label>
+            <input type="date" name="date_of_birth" required> 
+            <label for="()">Hobi<label>
+            <input type="text" name="hobby" placeholder="hobimu" required>
+            <label for="()">Quote<label>
+            <textarea rows="5" name="quote"></textarea>
+
+            <button type="submit">Submit</button>
+
+        </form>
+    </body>
+</html>
+
